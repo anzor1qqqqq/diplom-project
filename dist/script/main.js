@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelectorAll(".nav_menu").forEach((e=>{e.addEventListener("click",(e=>{e.preventDefault();const t=e.target.getAttribute("href");document.querySelector(t).scrollIntoView({behavior:"smooth",block:"start"})}))}))})();
