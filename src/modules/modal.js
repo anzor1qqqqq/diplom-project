@@ -4,9 +4,12 @@ const createModalWindow = () => {
     const callbackBtn = document.querySelectorAll('.callback-btn');
     const modalOverlay = document.querySelector('.modal-overlay');
     const callback = document.querySelector('#callback');
+    const spanState = document.querySelector('.span_state');
 
     const closeModal = event => {
         if (event.target.tagName === 'IMG' || event.target.classList.contains('modal-overlay')) {
+            spanState.textContent = '';
+
             modalOverlay.style.display = 'none';
             callback.style.display = 'none';
         };

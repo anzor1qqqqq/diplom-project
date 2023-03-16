@@ -1224,6 +1224,10 @@ video#video_background {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+.span_state {
+	color: #2fab6d;
+}
+
 @media only screen and (min-width: 992px) {
 	.services-elements > .row > hr:nth-of-type(2n) {
 		clear: none;
