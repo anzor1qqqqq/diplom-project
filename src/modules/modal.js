@@ -1,6 +1,7 @@
 'use strict';
 
 const createModalWindow = () => {
+    const formCallback = document.querySelector('[name="form-callback"]');
     const callbackBtn = document.querySelectorAll('.callback-btn');
     const modalOverlay = document.querySelector('.modal-overlay');
     const callback = document.querySelector('#callback');
@@ -9,7 +10,8 @@ const createModalWindow = () => {
     const closeModal = event => {
         if (event.target.tagName === 'IMG' || event.target.classList.contains('modal-overlay')) {
             spanState.textContent = '';
-
+            formCallback.reset();
+            
             modalOverlay.style.display = 'none';
             callback.style.display = 'none';
         };
