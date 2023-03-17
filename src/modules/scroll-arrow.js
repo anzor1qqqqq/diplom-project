@@ -18,7 +18,6 @@ const scrollArrow = () => {
         event.preventDefault();
 
         const id = upArrow.getAttribute('href');
-        console.log(document.querySelector(id));
 
         document.querySelector(id).scrollIntoView({
             behavior: 'smooth',

@@ -908,7 +908,7 @@ video#video_background {
 
 .item.hidden {
 	opacity: 0;
-}
+};
 
 @media only screen and (min-width: 768px) {
 	.top-slider .item {
@@ -1224,6 +1224,7 @@ video#video_background {
 }
 
 .up {
+	display: none;
 	position: fixed;
 	bottom: 50px;
 	right: 50px;
