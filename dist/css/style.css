@@ -855,7 +855,7 @@ hr.white {
 .top-slider .item {
 	overflow: hidden;
 	height: 450px;
-	position: relative;
+	/* position: relative; */
 }
 .top-slider .item:before {
 	content: "";
@@ -896,6 +896,18 @@ video#video_background {
 	height: 100%;
 	background: url(../images/pattern2.png);
 	z-index: 1;
+}
+
+.item {
+	position: absolute;
+	transition: 1s;
+	opacity: 1; 
+	width: 100%;
+	position: absolute;
+}
+
+.item.hidden {
+	opacity: 0;
 }
 
 @media only screen and (min-width: 768px) {
