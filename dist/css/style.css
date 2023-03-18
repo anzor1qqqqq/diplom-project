@@ -982,12 +982,17 @@ video#video_background {
 /* end top slider */
 
 /************************* accordeon **************************/
-.accordeon .element-content {
-	display: none;
-	padding: 20px;
-	font-size: 13px;
-	color: #888885;
+/* .accordeon  */.element-content {
+/* 	display: none;*/
+	height: 0;
+	/* padding: 20px;  */
+    font-size: 13px;
+    color: #888885;
+    overflow: hidden;
+	transition: 0.2s;
+
 }
+
 .accordeon .element {
 	margin-bottom: 6px;
 	background: #fff;
@@ -1003,10 +1008,10 @@ video#video_background {
 	letter-spacing: 0.5px;
 	position: relative;
 	color: #888885;
-	-webkit-transition: all 200ms ease-out;
+/* 	-webkit-transition: all 200ms ease-out;
 	-moz-transition: all 200ms ease-out;
 	-o-transition: all 200ms ease-out;
-	transition: all 200ms ease-out;
+	transition: all 200ms ease-out; */
 }
 .accordeon .element.active .title {
 	background: #e9bb26;
@@ -1033,9 +1038,9 @@ video#video_background {
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+/* .accordeon > div:first-of-type .element-content {
 	display: block;
-}
+} */
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
