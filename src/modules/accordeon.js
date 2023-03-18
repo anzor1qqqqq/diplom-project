@@ -10,11 +10,13 @@ const accordeonAbout = () => {
             if (!item.classList.contains('active')) {
                 elementAccordeon.forEach((elem, index) => {
                     elem.classList.remove('active');
+                    
                     elementContent[index].style.height = '';
                     elementContent[index].style.padding = '';
                 });
     
                 item.classList.add('active');
+
                 elementContent[i].style.height = (elementContent[i].scrollHeight + 50) + 'px';
                 elementContent[i].style.padding = '20px';
             } else {
