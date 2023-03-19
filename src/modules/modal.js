@@ -7,6 +7,8 @@ const createModalWindow = () => {
     const callback = document.querySelector('#callback');
     const spanState = document.querySelector('.span_state');
 
+    const cardModal = document.querySelectorAll('[href="#application"]');
+
     const closeModal = event => {
         if (event.target.tagName === 'IMG' || event.target.classList.contains('modal-overlay')) {
             spanState.textContent = '';
@@ -18,6 +20,15 @@ const createModalWindow = () => {
     };
     
     callbackBtn.forEach(item => {
+        item.addEventListener('click', () => {
+            modalOverlay.style.display = 'block';
+            callback.style.display = 'block';
+
+            document.addEventListener('click', closeModal);
+        });
+    });
+
+    cardModal.forEach(item => {
         item.addEventListener('click', () => {
             modalOverlay.style.display = 'block';
             callback.style.display = 'block';
