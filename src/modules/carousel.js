@@ -25,7 +25,6 @@ const carouselSlider = () => {
         arrowRight.addEventListener('click', () => {
             cardService.forEach(item => {
                 lastCard = parseInt(cardService[5].style.right);
-                console.log('lastCard: ', lastCard);
     
                 if (lastCard !== 0) {
                     right = parseInt(item.style.right);

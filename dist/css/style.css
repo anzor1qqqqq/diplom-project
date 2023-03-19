@@ -1246,6 +1246,31 @@ video#video_background {
 	color: #2fab6d;
 }
 
+.col-md-4 {
+	right: 0;
+}
+
+@media (min-width: 1000px) {
+	.col-md-4 {
+		right: 1px;
+		transition: 1s;
+	}
+	
+	.col-md-4.no-active {
+		position: absolute;
+	}
+	
+	.services-carousel {
+		position: relative;
+	}
+	
+	.block_carousel {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+	}
+}
+
 @media only screen and (min-width: 992px) {
 	.services-elements > .row > hr:nth-of-type(2n) {
 		clear: none;

@@ -5,6 +5,7 @@ import regularIputForm from "./modules/regular";
 import sliderPreview from "./modules/slider";
 import scrollArrow from "./modules/scroll-arrow";
 import accordeonAbout from "./modules/accordeon";
+import carouselSlider from "./modules/carousel";
 
 menuNavigator();
 createModalWindow();
@@ -13,3 +14,4 @@ regularIputForm();
 sliderPreview();
 scrollArrow();
 accordeonAbout();
+carouselSlider();
