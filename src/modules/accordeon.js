@@ -27,6 +27,7 @@ const accordeonAbout = () => {
             };
         });
     });
+    
 };
 
 export default accordeonAbout;
