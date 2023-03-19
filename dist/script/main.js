@@ -1,1 +1,166 @@
-(()=>{"use strict";document.querySelectorAll(".nav_menu").forEach((e=>{e.addEventListener("click",(e=>{e.preventDefault();const t=e.target.getAttribute("href");document.querySelector(t).scrollIntoView({behavior:"smooth",block:"start"})}))})),(()=>{const e=document.querySelector('[name="form-callback"]'),t=document.querySelectorAll(".callback-btn"),l=document.querySelector(".modal-overlay"),o=document.querySelector("#callback"),c=document.querySelector(".span_state"),r=t=>{("IMG"===t.target.tagName||t.target.classList.contains("modal-overlay"))&&(c.textContent="",e.reset(),l.style.display="none",o.style.display="none")};t.forEach((e=>{e.addEventListener("click",(()=>{l.style.display="block",o.style.display="block",document.addEventListener("click",r)}))})),document.removeEventListener("click",r)})(),(()=>{const e=document.querySelector('[name="form-callback"]'),t=document.querySelector(".span_state");let l;e.addEventListener("submit",(o=>{o.preventDefault();const c=new FormData(e),r={};l=!0,c.forEach(((e,t)=>{""==e&&(l=!1),r[t]=e})),l&&(t.textContent="Идет отправка ваших данных...",(async e=>await fetch("https://jsonplaceholder.typicode.com/todos",{method:"POST",headers:{"Content-type":"application/json"},body:JSON.stringify(e)}).then((e=>e.json())))(r).then((e=>{console.log(e),t.textContent="Ваши данные отправлены"})).catch((e=>{console.log(e),t.style.color="red",t.textContent="Произошла ошибка!"})),e.reset())}))})(),(()=>{const e=document.querySelector('[name="name"]'),t=document.querySelector('[name="telNum"]');e.addEventListener("input",(e=>{e.target.value=e.target.value.replace(/[^\а-яА-Я\s]/g,"")})),t.addEventListener("input",(e=>{e.target.value=e.target.value.replace(/[^\d?\+]/g,"")}))})(),(()=>{const e=document.querySelectorAll(".item");let t=0;setInterval((()=>{e[t].classList.add("hidden"),2!==t?t++:t=0,e[t].classList.remove("hidden")}),3e3)})(),(()=>{const e=document.querySelector(".up"),t=document.querySelector(".services-section ");document.addEventListener("scroll",(()=>{let l=t.getBoundingClientRect().y;l<=0?e.style.display="block":l>=300&&(e.style.display="none")})),e.addEventListener("click",(t=>{t.preventDefault();const l=e.getAttribute("href");document.querySelector(l).scrollIntoView({behavior:"smooth",block:"start"})}))})(),(()=>{const e=document.querySelector(".accordeon"),t=e.querySelectorAll(".element"),l=e.querySelectorAll(".element-content");t.forEach(((e,o)=>{e.addEventListener("click",(()=>{e.classList.contains("active")?(e.classList.remove("active"),l[o].style.height="",l[o].style.padding=""):(t.forEach(((e,t)=>{e.classList.remove("active"),l[t].style.height="",l[t].style.padding=""})),e.classList.add("active"),l[o].style.height=l[o].scrollHeight+50+"px",l[o].style.padding="20px")}))}))})(),(()=>{const e=document.querySelector(".arrow-left"),t=document.querySelector(".arrow-right"),l=document.querySelectorAll(".col-md-4"),o=document.querySelector(".services-arrow");let c=0,r=0;window.screen.availWidth<1e3?(l.forEach((e=>{e.style.right="0px"})),o.style.display="none"):(o.style.display="",(()=>{l.forEach((e=>{e.classList.contains("no-active")?(c+=l[0].offsetWidth,e.style.right="-"+c+"px"):e.style.right="0px"}));let o=parseInt(l[5].style.right);t.addEventListener("click",(()=>{l.forEach((e=>{o=parseInt(l[5].style.right),0!==o&&(c=parseInt(e.style.right),e.style.right=c+e.offsetWidth+"px")}))})),e.addEventListener("click",(()=>{l.forEach((e=>{o=parseInt(l[5].style.right),r="-"+3*e.offsetWidth,o!==+r&&(c=parseInt(e.style.right),e.style.right=c-e.offsetWidth+"px")}))}))})())})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_navigator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigator */ \"./src/modules/navigator.js\");\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ \"./src/modules/modal.js\");\n/* harmony import */ var _modules_db_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/db-base */ \"./src/modules/db-base.js\");\n/* harmony import */ var _modules_regular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/regular */ \"./src/modules/regular.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_scroll_arrow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scroll-arrow */ \"./src/modules/scroll-arrow.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/accordeon */ \"./src/modules/accordeon.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/carousel */ \"./src/modules/carousel.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_navigator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_db_base__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_regular__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n(0,_modules_scroll_arrow__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n(0,_modules_carousel__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n\n//# sourceURL=webpack://diplom-project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/accordeon.js":
+/*!**********************************!*\
+  !*** ./src/modules/accordeon.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst accordeonAbout = () => {\r\n    const accordeon = document.querySelector('.accordeon');\r\n    const elementAccordeon = accordeon.querySelectorAll('.element');\r\n    const elementContent = accordeon.querySelectorAll('.element-content');\r\n\r\n    elementAccordeon.forEach((item, i) => {\r\n        item.addEventListener('click', () => {\r\n            if (!item.classList.contains('active')) {\r\n                elementAccordeon.forEach((elem, index) => {\r\n                    elem.classList.remove('active');\r\n                    \r\n                    elementContent[index].style.height = '';\r\n                    elementContent[index].style.padding = '';\r\n                });\r\n    \r\n                item.classList.add('active');\r\n\r\n                elementContent[i].style.height = (elementContent[i].scrollHeight + 50) + 'px';\r\n                elementContent[i].style.padding = '20px';\r\n            } else {\r\n                item.classList.remove('active');\r\n\r\n                elementContent[i].style.height = '';\r\n                elementContent[i].style.padding = '';\r\n            };\r\n        });\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeonAbout);\n\n//# sourceURL=webpack://diplom-project/./src/modules/accordeon.js?");
+
+/***/ }),
+
+/***/ "./src/modules/carousel.js":
+/*!*********************************!*\
+  !*** ./src/modules/carousel.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst carouselSlider = () => {\r\n    const cardService = document.querySelectorAll('.col-md-4');\r\n\r\n    const arrowLeft = document.querySelector('.arrow-left');\r\n    const arrowRight = document.querySelector('.arrow-right');\r\n    const servicesArrow = document.querySelector('.services-arrow');\r\n\r\n    let right = 0;\r\n    let protect = 0;\r\n\r\n    const onSlideCarousel = () => {\r\n        cardService.forEach(item => {\r\n            if (item.classList.contains('no-active')) {\r\n                right += cardService[0].offsetWidth;\r\n    \r\n                item.style.right = '-' + right + 'px';\r\n            } else {\r\n                item.style.right = '0px';\r\n            };\r\n        });\r\n    \r\n        let lastCard = parseInt(cardService[5].style.right);\r\n    \r\n        arrowRight.addEventListener('click', () => {\r\n            cardService.forEach(item => {\r\n                lastCard = parseInt(cardService[5].style.right);\r\n    \r\n                if (lastCard !== 0) {\r\n                    right = parseInt(item.style.right);\r\n                    \r\n                    item.style.right = (right + item.offsetWidth) + 'px';\r\n                };\r\n            });\r\n        });\r\n    \r\n        arrowLeft.addEventListener('click', () => {\r\n            cardService.forEach(item => {\r\n                lastCard = parseInt(cardService[5].style.right);\r\n                protect = '-' + (item.offsetWidth * 3);\r\n                \r\n                if (lastCard !== +protect) {\r\n                    right = parseInt(item.style.right);\r\n    \r\n                    item.style.right = (right - item.offsetWidth) + 'px';\r\n                };\r\n            });\r\n        });\r\n    };\r\n\r\n    const offSlideCarousel = () => {\r\n        if (window.screen.availWidth < 1000) {\r\n            cardService.forEach(item => {\r\n                item.style.right = '0px';\r\n            });\r\n    \r\n            servicesArrow.style.display = 'none';\r\n        } else {\r\n            servicesArrow.style.display = '';\r\n            onSlideCarousel();\r\n        };\r\n    };\r\n\r\n    offSlideCarousel();\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (carouselSlider);\n\n//# sourceURL=webpack://diplom-project/./src/modules/carousel.js?");
+
+/***/ }),
+
+/***/ "./src/modules/db-base.js":
+/*!********************************!*\
+  !*** ./src/modules/db-base.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst createDbBase = () => {\r\n    const formCallback = document.querySelector('[name=\"form-callback\"]');\r\n    const spanState = document.querySelector('.span_state');\r\n\r\n    const awaitMessage = 'Идет отправка ваших данных...';\r\n    const succesMessage = 'Ваши данные отправлены';\r\n    const errorMessage = 'Произошла ошибка!';\r\n    \r\n    let bool;\r\n\r\n    const setDate = async (obj) => {\r\n        return await fetch('https://jsonplaceholder.typicode.com/todos', {\r\n            method: 'POST',\r\n\r\n            headers: {\r\n                \"Content-type\": \"application/json\",\r\n            },\r\n\r\n            body: JSON.stringify(obj),\r\n        }).then((response) => response.json());\r\n    };\r\n    \r\n    formCallback.addEventListener('submit', event => {\r\n        event.preventDefault();\r\n\r\n        const date = new FormData(formCallback);\r\n        const obj = {};\r\n\r\n        bool = true;\r\n\r\n        date.forEach((val, key) => {\r\n            if (val == '') bool = false;\r\n\r\n            obj[key] = val;\r\n        });\r\n\r\n        if (bool) {\r\n            spanState.textContent = awaitMessage;\r\n\r\n            setDate(obj).then((text) => {\r\n                console.log(text);\r\n\r\n                spanState.textContent = succesMessage;  \r\n            }).catch((error) => {\r\n                console.log(error);\r\n\r\n                spanState.style.color = 'red';\r\n                spanState.textContent = errorMessage; \r\n            });\r\n\r\n            formCallback.reset();\r\n        };\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createDbBase);\n\n//# sourceURL=webpack://diplom-project/./src/modules/db-base.js?");
+
+/***/ }),
+
+/***/ "./src/modules/modal.js":
+/*!******************************!*\
+  !*** ./src/modules/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst createModalWindow = () => {\r\n    const formCallback = document.querySelector('[name=\"form-callback\"]');\r\n    const callbackBtn = document.querySelectorAll('.callback-btn');\r\n    const modalOverlay = document.querySelector('.modal-overlay');\r\n    const callback = document.querySelector('#callback');\r\n    const spanState = document.querySelector('.span_state');\r\n\r\n    const cardModal = document.querySelectorAll('[href=\"#application\"]');\r\n\r\n    const closeModal = event => {\r\n        if (event.target.tagName === 'IMG' || event.target.classList.contains('modal-overlay')) {\r\n            spanState.textContent = '';\r\n            formCallback.reset();\r\n            \r\n            modalOverlay.style.display = 'none';\r\n            callback.style.display = 'none';\r\n        };\r\n    };\r\n    \r\n    callbackBtn.forEach(item => {\r\n        item.addEventListener('click', () => {\r\n            modalOverlay.style.display = 'block';\r\n            callback.style.display = 'block';\r\n\r\n            document.addEventListener('click', closeModal);\r\n        });\r\n    });\r\n\r\n    cardModal.forEach(item => {\r\n        item.addEventListener('click', () => {\r\n            modalOverlay.style.display = 'block';\r\n            callback.style.display = 'block';\r\n\r\n            document.addEventListener('click', closeModal);\r\n        });\r\n    });\r\n\r\n    document.removeEventListener('click', closeModal);\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createModalWindow);\n\n//# sourceURL=webpack://diplom-project/./src/modules/modal.js?");
+
+/***/ }),
+
+/***/ "./src/modules/navigator.js":
+/*!**********************************!*\
+  !*** ./src/modules/navigator.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst menuNavigator = () => {\r\n    const navMenu = document.querySelectorAll('.nav_menu');\r\n\r\n    navMenu.forEach(item => {\r\n        item.addEventListener('click', event => {\r\n            event.preventDefault();\r\n\r\n            const id = event.target.getAttribute('href');\r\n            \r\n            document.querySelector(id).scrollIntoView({\r\n                behavior: 'smooth',\r\n                block: 'start',\r\n            });\r\n        });\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuNavigator);\n\n//# sourceURL=webpack://diplom-project/./src/modules/navigator.js?");
+
+/***/ }),
+
+/***/ "./src/modules/regular.js":
+/*!********************************!*\
+  !*** ./src/modules/regular.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst regularIputForm = () => {\r\n    const inputName = document.querySelector('[name=\"name\"]');\r\n    const inputTel = document.querySelector('[name=\"telNum\"]');\r\n\r\n    inputName.addEventListener('input', event => {\r\n        event.target.value = event.target.value.replace(/[^\\а-яА-Я\\s]/g, '');\r\n    });\r\n\r\n    inputTel.addEventListener('input', event => {\r\n        event.target.value = event.target.value.replace(/[^\\d?\\+]/g, '');\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regularIputForm);\n\n//# sourceURL=webpack://diplom-project/./src/modules/regular.js?");
+
+/***/ }),
+
+/***/ "./src/modules/scroll-arrow.js":
+/*!*************************************!*\
+  !*** ./src/modules/scroll-arrow.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst scrollArrow = () => {\r\n    const upArrow = document.querySelector('.up');\r\n    const servicesSection = document.querySelector('.services-section ');\r\n\r\n    document.addEventListener('scroll', () => {\r\n        let coordinateY = servicesSection.getBoundingClientRect().y;\r\n\r\n        if (coordinateY <= 0) {\r\n            upArrow.style.display = 'block';\r\n        } else if (coordinateY >= 300) {\r\n            upArrow.style.display = 'none';\r\n        };\r\n    });\r\n\r\n    upArrow.addEventListener('click', event => {\r\n        event.preventDefault();\r\n\r\n        const id = upArrow.getAttribute('href');\r\n\r\n        document.querySelector(id).scrollIntoView({\r\n            behavior: 'smooth',\r\n            block: 'start',\r\n        });\r\n    });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollArrow);\n\n//# sourceURL=webpack://diplom-project/./src/modules/scroll-arrow.js?");
+
+/***/ }),
+
+/***/ "./src/modules/slider.js":
+/*!*******************************!*\
+  !*** ./src/modules/slider.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst sliderPreview = () => {\r\n    const itemSlider = document.querySelectorAll('.item');\r\n\r\n    let counter = 0;\r\n\r\n    const swipeSlide = () => {\r\n        itemSlider[counter].classList.add('hidden');\r\n\r\n        counter !== 2 ? counter++ : counter = 0;\r\n\r\n        itemSlider[counter].classList.remove('hidden');\r\n    };\r\n\r\n    const startSlider = () => {\r\n        setInterval(swipeSlide, 3000)\r\n    };\r\n\r\n    startSlider();\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sliderPreview);\n\n//# sourceURL=webpack://diplom-project/./src/modules/slider.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
+/******/ })()
+;

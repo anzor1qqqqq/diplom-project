@@ -1,9 +1,10 @@
 'use strict';
 
 const carouselSlider = () => {
+    const cardService = document.querySelectorAll('.col-md-4');
+
     const arrowLeft = document.querySelector('.arrow-left');
     const arrowRight = document.querySelector('.arrow-right');
-    const cardService = document.querySelectorAll('.col-md-4');
     const servicesArrow = document.querySelector('.services-arrow');
 
     let right = 0;
