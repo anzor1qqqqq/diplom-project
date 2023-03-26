@@ -612,7 +612,7 @@ img.right{
 }
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: #E9BB26;
 }
 ::-webkit-scrollbar-track {

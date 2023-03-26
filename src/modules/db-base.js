@@ -1,5 +1,7 @@
 'use strict';
 
+import { checkInput } from "./regular2";
+
 const createDbBase = () => {
     const formCallback = document.querySelector('[name="form-callback"]');
     const spanState = document.querySelector('.span_state');
@@ -36,7 +38,9 @@ const createDbBase = () => {
             obj[key] = val;
         });
 
-        if (bool) {
+        const a = checkInput(obj);
+
+        if (bool && a) {
             spanState.textContent = awaitMessage;
 
             setDate(obj).then((text) => {
